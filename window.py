@@ -5,7 +5,13 @@ class Window:
         self.__root = Tk()
         self.__root.title("My Tkinter Window")
 
-        self.__canvas = Canvas(self.__root, width=width, height=height)
+        # force a pure-white background ⬇
+        self.__canvas = Canvas(
+            self.__root,
+            width=width,
+            height=height,
+            bg="white"          # ← add this line
+        )
         self.__canvas.pack(fill=BOTH, expand=True)
 
         self.__running = False
